@@ -1,83 +1,97 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title> </title>
-        <style>
-           body {
-             margin-top:  100px;
-             margin-left: 25%;
-             margin-right: 25%;
-             font-family: Verdana ;
-             font-size: 1.25em ;
-           }
-           .topic {
-              color: darkorange ;
-           }
-           img {
-              margin: 10px auto 20px ;
-              display: block ;
-            }
-           ol, ul {
-              list-style-type: none;
-           }
-        </style>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Science Test</title>
+    <style>
+      body {
+        margin-top: 100px;
+        margin-left: 25%;
+        margin-right: 25%;
+        font-family: Verdana;
+        font-size: 1.25em;
+      }
+      .topic {
+        color: darkorange;
+      }
+      img {
+        margin: 10px auto 20px;
+        display: block;
+      }
+    </style>
+  </head>
   <body>
     <h1>Data Science Test</h1>
     <p>There are three questions. Answer all questions and press Send.</p>
-    
+
     <form action="../showanswer.php" method="post">
-      <p>1.Which disclipline is not in Data Scientist?</p>
-    
-      <ul>
+      <ol>
         <li>
-          <input type="radio" value="1" name="question1" id="question1Choice1">
-          <label for="question1Choice1">Data Engineering</label>
+          <p>Which disclipline is not in Data Scientist?</p>
+          <div id="question1_choices">
+            <input type="radio" name="question1" id="data_eng" value="1" />
+            <label for="data_eng">Data Engineering</label><br />
+
+            <input type="radio" name="question1" id="visualization" value="2" />
+            <label for="visualization">Visualization</label><br />
+
+            <input type="radio" name="question1" id="statistics" value=3" />
+            <label for="statistics">Statistics</label><br />
+
+            <input
+              type="radio"
+              name="question1"
+              id="computer_graphic"
+              value="4"
+            />
+            <label for="computer_graphic">Computer Graphic</label>
+          </div>
         </li>
-    
+
         <li>
-          <input type="radio" value="2" name="question1" id="question1Choice2">
-          <label for="question1Choice2">Visualization</label>
+          <p>
+            Which skills and expertise should Data Scientists should have?
+            (Choose all possible)
+          </p>
+          <div id="question2_choices">
+            <input
+              type="checkbox"
+              name="question2[]"
+              id="business_domain"
+              value="1"
+            />
+            <label for="business_domain">Business/Domain</label><br />
+
+            <input
+              type="checkbox"
+              name="question2[]"
+              id="mathematics"
+              value="2"
+            />
+            <label for="mathematics">Mathematics</label><br />
+
+            <input type="checkbox" name="question2[]" id="computer_science"
+            value=3" />
+            <label for="computer_science">Computer Science</label><br />
+
+            <input
+              type="checkbox"
+              name="question2[]"
+              id="communication"
+              value="4"
+            />
+            <label for="communication">Communication</label>
+          </div>
+          <br />
         </li>
-    
         <li>
-          <input type="radio" value="3" name="question1" id="question1Choice3">
-          <label for="question1Choice3">Statistics</label>
+          <label for="question3">
+            List Data Science process and show all tasks in each process.
+          </label>
+          <textarea id="question3" rows="5" cols="80"></textarea>
         </li>
-    
-        <li>
-          <input type="radio" value="4" name="question1" id="question1Choice4">
-          <label for="question1Choice4">Computer Graphic</label>
-        </li>
-      </ul>
-      
-      <p>2. Which skills and expertise should Data Scientists should have? (Choose all possible)</p>
-      
-      <ul>
-        <li>
-          <input type="checkbox" name="question2[]" value="1" id="question2Choice1">
-          <label for="question2Choice1">Business/Domain</label>
-        </li>
-        <li>
-          <input type="checkbox" name="question2[]" value="2" id="question2Choice2">
-          <label for="question2Choice2">Mathematics</label>
-        </li>
-        <li>
-          <input type="checkbox" name="question2[]" value="3" id="question2Choice3">
-          <label for="question2Choice3">Computer Science</label>
-        </li>
-        <li>
-          <input type="checkbox" name="question2[]" value="4" id="question2Choice4">
-          <label for="question2Choice4">Communication</label>
-        </li>
-      </ul>
-      
-      <p>3.List Data Science process and show all tasks in each process.</p>
-      <textarea name="question3" cols="80" rows="5"></textarea>
-  
-      <br>
-      <button type="submit">Send</button>
+      </ol>
+      <input type="submit" value="Send" />
     </form>
   </body>
 </html>
